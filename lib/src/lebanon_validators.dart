@@ -2,15 +2,12 @@ import 'package:plate_core/plate_core.dart';
 
 import 'lebanon_letters.dart';
 
-/// Judges a Lebanese plate value. Reports, never throws, never bars a keystroke.
+/// Advisory validator; never bars a keystroke. Waits for a non-empty serial.
 ///
-/// Waits until serial is non-empty to validate (letter is slot 0). Checks:
-/// letter is valid (closed set), serial is 1–6 digits, MP serial is 1–128.
-/// Does not check: number value/allocation, leading zeros, obsolete letters
-/// (K). All intentional: there is no published block allocation or per-town
-/// range; K plates are on the road.
+/// Checks the letter against the closed set, a 1-6 digit serial, and 1-128 for
+/// MP. Number allocation and the obsolete `K` are deliberately not checked:
+/// there is no published per-town range, and K plates are on the road.
 class LebanonValidator extends GatedPlateValidator {
-  /// A stateless rule; hold one as a `const`.
   const LebanonValidator();
 
   @override

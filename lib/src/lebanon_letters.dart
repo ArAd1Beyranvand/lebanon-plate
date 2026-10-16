@@ -1,7 +1,5 @@
-/// The letter on a Lebanese plate. On white plates, the town of registration
-/// (B Beirut, T Tripoli, etc.). On coloured plates, the class letter. See
-/// `LebanonUsage` for why the two axes are separate. [inUse] is advisory:
-/// `K` is documented issued but not current, yet is never rejected.
+/// The letter on a Lebanese plate: the town on white plates, the class on
+/// coloured ones. [inUse] is advisory; `K` is not current but never rejected.
 enum LebanonLetter {
   /// Pre-1998 general series.
   a(
