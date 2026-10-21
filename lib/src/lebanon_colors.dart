@@ -6,8 +6,7 @@ abstract final class LebanonColors {
   static const Color band = Color(0xFF0D63B5); // CALIBRATE
   static const Color bandInk = Color(0xFFFFFFFF); // CALIBRATE
 
-  /// Private vehicles and the uncoloured letter classes (judicial, religious,
-  /// parliament, motorcycles).
+  /// Private vehicles and the uncoloured letter classes.
   static const Color white = Color(0xFFFFFFFF); // CALIBRATE
 
   /// Consular vehicles (C).

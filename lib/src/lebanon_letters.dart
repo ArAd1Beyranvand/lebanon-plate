@@ -56,10 +56,7 @@ enum LebanonLetter {
   /// Case-insensitive lookup; `'mp'` and `'MP'` both return [mp].
   static LebanonLetter? fromCharacter(String character) {
     final String key = character.toUpperCase();
-    for (final LebanonLetter l in values) {
-      if (l.character == key) return l;
-    }
-    return null;
+    return values.where((LebanonLetter l) => l.character == key).firstOrNull;
   }
 
   static const List<String> characters = <String>[
