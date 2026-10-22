@@ -23,9 +23,7 @@ abstract final class LebanonSerialGenerator {
     LebanonUsage? usage,
   }) {
     if (letter != null && usage?.letter != null) {
-      throw ArgumentError(
-        'Pass letter: or usage:, not both — they would disagree.',
-      );
+      throw ArgumentError('Pass letter: or usage:, not both — they would disagree.');
     }
     final Random rnd = random ?? Random();
     final List<String?> values = List<String?>.filled(spec.slots.length, null);
@@ -79,11 +77,7 @@ abstract final class LebanonSerialGenerator {
 List<int> _require(PlateSpec spec, String key) {
   final List<int> indices = spec.indicesOfGroup(key);
   if (indices.isEmpty) {
-    throw ArgumentError.value(
-      spec.id,
-      'spec',
-      'has no text group named "$key"',
-    );
+    throw ArgumentError.value(spec.id, 'spec', 'has no text group named "$key"');
   }
   return indices;
 }
